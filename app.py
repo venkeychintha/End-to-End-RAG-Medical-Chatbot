@@ -21,7 +21,7 @@ os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 embeddings = download_hugging_face_embeddings()
 
-#Load the Existing index
+#Load the Existing index from
 index_name = "medical-chatbot"
 # Embed each chunk and upsert the embeddings into your Pinecone index
 docsearch = PineconeVectorStore.from_existing_index(
@@ -55,6 +55,7 @@ def chat():
     response = rag_chain.invoke({"input": msg})
     print("Response : ", response["answer"])
     return str(response["answer"])
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)
