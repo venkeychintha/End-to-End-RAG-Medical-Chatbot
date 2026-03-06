@@ -1,4 +1,4 @@
-# End-to-End-RAG-Meical-Chatbot
+# End-to-End-RAG-Medical-Chatbot
 
 # How to run?
 ### STEPS:
